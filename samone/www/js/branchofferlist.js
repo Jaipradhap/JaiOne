@@ -1,6 +1,6 @@
 var serviceURLO = "http://lowestprice.comuv.com/";
 
-$('#branchListPage').live('pageshow', function(event) {
+$(document).on('pageshow','#branchListPage',function(event) {
 	var id = getUrlVars()["branchid"];
 	console.log("reports for " + id);	
 	$.getJSON(serviceURLO + 'offerswebservices.php?f1='+id, function (data) {

@@ -1,58 +1,55 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
-		<link rel="stylesheet" href="css/styles.css" />
-
-        <title>Sample Shop</title>
-    </head>
-    <body>
-	
-  
-<div id="homeListPage" data-role="page">
-
-	<div data-role="header" data-position="fixed">
-		<h1>Sample Shop</h1>
-	</div>
-
-	<div data-role="content">
-		 
-		 <h1><a href="indexbranch.html" >Chennai</a></h1>
-         
-    </div>		
-	
-</div>		
-
-
+<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
 <script src="js/jquery.js"></script>
-<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+<script src="js/jquery.mobile-1.4.2.min.js"></script>
 <script src="js/branchlist.js"></script>
 <script src="js/branchofferlist.js"></script>
-		<script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        
-    </body>
+<script type="text/javascript" src="cordova.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Welcome To My Homepage</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Welcome! If you click on the link below, it will take you to Page Two.</p>
+    <a href="#pagetwo" data-transition="slide"   class="ui-btn" >Go to Page Two</a>
+	
+	<a href="indexbranch.html" data-transition="slide"   class="ui-btn" >Chennai</a>
+	
+	
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div> 
+
+<!-- page 2 -->
+<div data-role="page" id="pagetwo">
+  <div data-role="header">
+    <h1>Welcome To My Homepage</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>This is Page Two. If you click on the link below, it will take you to Page One.</p>
+    <a href="#pageone"   class="ui-btn ui-btn-inline">Go to Page One</a>
+	<a href="#pageone" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-left ui-corner-all">to Page One</a>
+    <a href="#pageone" class="ui-btn ui-btn-inline  ui-shadow">Page One</a>
+    <a href="#pageone" class="ui-btn ui-btn-inline  ui-corner-all ui-btn-b ">++Page One</a>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div> 
+
+</body>
 </html>

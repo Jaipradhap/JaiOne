@@ -2,13 +2,13 @@
 var serviceURL = "http://lowestprice.comuv.com/";
 var employees;
 
-$('#employeeListPage').live('pageshow', function(event) {
+$(document).on('pageshow','#employeeListPage', function(event) {
 
 	getEmployeeList();
 });
 
 function getEmployeeList() {
-$("div#loadingid").show();
+
 
 	$.getJSON(serviceURL + 'branchws.php', function(data) {
 	
@@ -22,7 +22,7 @@ $("div#loadingid").show();
 						'</a></li>');
 
 					});
-		$("div#loadingid").hide();	
+
 		$('#employeeList').listview('refresh');
 	}); 
 
