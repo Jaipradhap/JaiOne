@@ -30,7 +30,7 @@ $('#dateofferListPage').live('pageshow', function(event) {
 		else {
 		$('#dateofferList').append('<li>' + '<a href="singlebranchoffer.html?offerid=' + employee.id +'&branchid=' 
 						+ id + '">' +
-						'<img src="pics/spgreen.png"/>' +
+						'<img src="pics/spoffer.jpg"/>' +
 						'<h4>' + employee.subject  + '</h4>' +
 						'<p>Valid Upto ' + employee.expirydate + '</p>' +
 						'</a></li>');

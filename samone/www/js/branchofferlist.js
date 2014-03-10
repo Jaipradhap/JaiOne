@@ -16,7 +16,7 @@ $('#branchListPage').live('pageshow', function(event) {
 		
 		$('#branchList').append('<li>' + '<a href="singlebranchoffer.html?offerid=' + employee.id +'&branchid=' 
 						+ id + '">' +
-						'<img src="pics/spgreen.png"/>' +
+						'<img src="pics/spoffer.jpg" />' +
 						'<h4>' + employee.subject  + '</h4>' +
 						'<p>' + employee.expirydate + '</p>' +
 						'</a></li>');
