@@ -1,28 +1,94 @@
 <!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  
+		<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.css" />
+	<style>
+		.button {
+		padding: 6px 10px;
+		margin: 2px;
+		color: #000000;
+		font-family: "Helvetica Neue", Arial, sans-serif;
+		font-size: 12px;
+		text-shadow: none;
+		text-decoration: none;
+		font-weight: bold;
+		}
 
-<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
-<script src="js/jquery.js"></script>
-<script src="js/jquery.mobile-1.4.2.min.js"></script>
-<script src="js/branchlist.js"></script>
-<script src="js/branchofferlist.js"></script>
-<script type="text/javascript" src="cordova.js"></script>
+		.large-corners { 
+			border-radius: 20px;
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px 20px;
+		}
+		
+	.gradient {
+	background-image: -moz-linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+	background-image: -webkit-linear-gradient-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.3)));
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.3));
+	background-image: -ms-linear-gradient(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.3));
+	background-image: no-repeat;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
 
-</head>
-<body>
+.yellow { background-color: #FFFFFF; }
 
-<div data-role="page" id="pageone">
+	</style>
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.mobile-1.0rc1.js"></script>
+		
+		<script src="js/branchlist.js"></script>
+		<script src="js/branchofferlist.js"></script>
+		<script src="js/singleoffer.js"></script>
+		<script src="js/alloffers.js"></script>
+		<script src="js/dateoffer.js"></script>
+		<script src="js/offerbanner.js"></script>
+		
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        <title>Sample Shop</title>
+    </head>
+    <body>
+	
+	
+	<div data-role="page" id="pageone">
   <div data-role="header">
     <h1>Welcome To My Homepage</h1>
   </div>
 
   <div data-role="main" class="ui-content">
-    <p>Welcome! If you click on the link below, it will take you to Page Two.</p>
-    <a href="#pagetwo" data-transition="slide"   class="ui-btn" >Go to Page Two</a>
+   <!-- <p>Welcome! If you click on the link below, it will take you to Page Two.</p>  
+    <a href="#pagetwo" data-transition="slide"   class="ui-btn" >Go to Page Two</a> -->
 	
-	<a href="indexbranch.html" data-transition="slide"   class="ui-btn" >Chennai</a>
+	<input type="button"  value="About us" onclick="location.href ='#pagetwo';" />
+	
+	<a href="#pagetwo"  class="button yellow gradient large-corners"><font color="black">About us</font></a>
+		
+	<a href="indexbranch.html"  class="button yellow gradient large-corners"><font color="black">Chennai</font></a>
 	
 	
   </div>
@@ -44,6 +110,7 @@
 	<a href="#pageone" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-left ui-corner-all">to Page One</a>
     <a href="#pageone" class="ui-btn ui-btn-inline  ui-shadow">Page One</a>
     <a href="#pageone" class="ui-btn ui-btn-inline  ui-corner-all ui-btn-b ">++Page One</a>
+	<input type="button" value="Example" onclick="location.href ='#pageone';" />
   </div>
 
   <div data-role="footer">
@@ -51,5 +118,23 @@
   </div>
 </div> 
 
-</body>
+	
+  <!--
+<div id="homeListPage" data-role="page">
+
+	<div data-role="header" data-position="fixed">
+		<h1>Sample Shop</h1>
+	</div>
+
+	<div data-role="content">
+		 
+		 <h1><a href="indexbranch.html" >Chennai</a></h1>
+         
+    </div>		
+	
+</div>		
+-->
+
+
+    </body>
 </html>

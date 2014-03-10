@@ -1,22 +1,31 @@
 var serviceURLO = "http://lowestprice.comuv.com/";
 
-$(document).on('pageshow','#branchListPage',function(event) {
+$('#branchListPage').live('pageshow', function(event) {
 	var id = getUrlVars()["branchid"];
-	console.log("reports for " + id);	
+	
+	var tempTag='<center><a href="alloffers.html?branchid=' + id +'" class="button yellow gradient large-corners"><font color="black">All Offers</a>' +
+	'<a href="tel:9095764220"  class="button yellow gradient large-corners"><img src="css/images/icons-png/phone-white.png"></a></center>';
+	
+	$('#branchHeadList').html(tempTag);
+	
+	
+	$.mobile.showPageLoadingMsg();
 	$.getJSON(serviceURLO + 'offerswebservices.php?f1='+id, function (data) {
 		var reports = data.emp_info;
 		$.each(reports, function(index, employee) {
 		
 		$('#branchList').append('<li>' + '<a href="singlebranchoffer.html?offerid=' + employee.id +'&branchid=' 
 						+ id + '">' +
-						'<img src="pics/logo.png"/>' +
+						'<img src="pics/spgreen.png"/>' +
 						'<h4>' + employee.subject  + '</h4>' +
 						'<p>' + employee.expirydate + '</p>' +
 						'</a></li>');
 		
 		});
 		$('#branchList').listview('refresh');
+		
 	});
+	$.mobile.hidePageLoadingMsg();
 });
 
 
